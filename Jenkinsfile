@@ -3,19 +3,25 @@ pipeline {
 	stages {
 		stage("Build") {
 			steps {
-			sh '''#!/bin/bash
-                 echo $PATH 
-         		'''
+			echo "There is nothing to build"
 			}
 		}
 		stage("Test") {
 			steps {
-			echo "Testing ........."
+			echo "There is nothing to tes"
 			}
 		}
 		stage("Deploy") {
 			steps {
-			echo "Deploying ........."
+			echo "Deploying......."
+			sh '''#!/bin/bash
+                cd /var/www/html/
+				sudo rm -rf *
+				sudo git clone https://github.com/phanison898/sample_html_website_for_aws_deploy.git
+				sudo mv sample_html_website_for_aws_deploy/* .
+         		'''
+			
+			echo "Deployed"
 			}
 		}
 	}
