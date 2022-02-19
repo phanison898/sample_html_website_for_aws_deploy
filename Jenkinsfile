@@ -3,7 +3,9 @@ pipeline {
 	stages {
 		stage("Build") {
 			steps {
-			echo $PATH
+			sh '''#!/bin/bash
+                 echo $PATH 
+         		'''
 			}
 		}
 		stage("Test") {
