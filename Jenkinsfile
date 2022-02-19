@@ -14,7 +14,7 @@ pipeline {
 		stage("Deploy") {
 			steps {
 			sh '''#!/bin/bash
-				cd /
+				pwd
                 		cd /var/www/html/
 				sudo rm -rf *
 				sudo git clone https://github.com/phanison898/sample_html_website_for_aws_deploy.git
