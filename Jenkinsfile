@@ -15,7 +15,7 @@ pipeline {
 			steps {
 			sh '''#!/bin/bash
 				pwd
-                		cd /var/www/html/
+                		cd /var/www/html
 				sudo rm -rf *
 				sudo git clone https://github.com/phanison898/sample_html_website_for_aws_deploy.git
 				sudo mv sample_html_website_for_aws_deploy/* .
