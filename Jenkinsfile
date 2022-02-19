@@ -14,6 +14,7 @@ pipeline {
 		stage("Deploy") {
 			steps {
 			sh '''#!/bin/bash
+			        cd root
 				ls -la
                 		cd /var/www/html
 				sudo rm -rf *
