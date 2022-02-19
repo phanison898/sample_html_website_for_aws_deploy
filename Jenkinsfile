@@ -15,6 +15,7 @@ pipeline {
 			steps {
 			sh '''#!/bin/bash
 				exit
+				cd /var/www/html/
 				ls -la
          		'''
 			}
